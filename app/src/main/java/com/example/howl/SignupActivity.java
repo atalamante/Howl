@@ -30,7 +30,7 @@ public class SignupActivity extends AppCompatActivity {
         editTextName = findViewById(R.id.editTextName);
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextSignUpPassword = findViewById(R.id.editTextSignupPassword);
-        btnSignUp = findViewById(R.id.btnSignup);
+        btnSignUp = findViewById(R.id.btnSignUp);
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,11 +56,13 @@ public class SignupActivity extends AppCompatActivity {
         user.setUsername(username);
         user.setPassword(password);
         user.setEmail(email);
+        user.put("name", name);
+        user.put("email", email);
         user.signUpInBackground(new SignUpCallback() {
             @Override
             public void done(ParseException e) {
                 if (e != null) {
-                    Log.e(TAG, "Error with signing up " + username);
+                    Log.e(TAG, "Error with signing up " + username, e);
                     return;
                 }
                 goMainActivity();
@@ -70,7 +72,7 @@ public class SignupActivity extends AppCompatActivity {
 
     private String getUsernameFromEmail(EditText editTextEmail) {
         int symbolLocation = editTextEmail.getText().toString().indexOf("@");
-        return editTextEmail.getText().toString().substring(0, symbolLocation+1);
+        return editTextEmail.getText().toString().substring(0, symbolLocation);
     }
 
     private void goMainActivity() {

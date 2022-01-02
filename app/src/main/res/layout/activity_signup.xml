@@ -58,8 +58,8 @@
         android:layout_below="@+id/editTextSignupPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Sign Up"
-        android:backgroundTint="@color/Cherry"/>
+        android:backgroundTint="@color/Cherry"
+        android:text="Sign Up" />
 
 
 </RelativeLayout>

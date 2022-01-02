@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.howl.Fragments.ComposeFragment;
 import com.example.howl.Fragments.PostsFragment;
 import com.example.howl.Fragments.ProfileFragment;
+import com.example.howl.Fragments.ProfilePageFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.parse.FindCallback;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.action_profile:
                     default:
-                        fragment = new ProfileFragment();
+                        fragment = new ProfilePageFragment();
                         break;
                 }
                 fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
