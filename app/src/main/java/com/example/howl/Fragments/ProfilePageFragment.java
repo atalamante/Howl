@@ -9,10 +9,14 @@ import androidx.fragment.app.Fragment;
 
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.howl.LoginActivity;
 import com.example.howl.Post;
@@ -42,21 +46,49 @@ public class ProfilePageFragment extends PostsFragment{
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        textViewUsername = view.findViewById(R.id.textViewUsername);
-        textViewUsername.setText(ParseUser.getCurrentUser().getUsername().toString());
-        btnLogout = view.findViewById(R.id.btnLogout);
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        inflater.inflate(R.menu.signout_menu, menu);
+        return;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.action_signout:
+            default:
+                Toast.makeText(getContext(), "Click Registered", Toast.LENGTH_SHORT).show();
                 ParseUser.logOut();
                 ParseUser currentUser = ParseUser.getCurrentUser();
                 Intent intent = new Intent(getContext(), LoginActivity.class);
                 startActivity(intent);
                 getActivity().finish();
-            }
-        });
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        textViewUsername = view.findViewById(R.id.textViewUsername);
+        textViewUsername.setText(ParseUser.getCurrentUser().getUsername().toString());
+//        btnLogout = view.findViewById(R.id.btnLogout);
+//        btnLogout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                ParseUser.logOut();
+//                ParseUser currentUser = ParseUser.getCurrentUser();
+//                Intent intent = new Intent(getContext(), LoginActivity.class);
+//                startActivity(intent);
+//                getActivity().finish();
+//            }
+//        });
     }
 
     protected void queryPosts() {

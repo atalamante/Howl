@@ -59,4 +59,5 @@
         android:layout_toEndOf="@+id/ivProfilePicture"
         android:text="Merry Christmas! Go Lobos!!"
         android:textColor="#FFFFFF" />
+
 </RelativeLayout>
