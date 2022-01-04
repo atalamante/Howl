@@ -36,6 +36,7 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:minHeight="48dp"
         android:textColorHint="@color/white" />
 
     <EditText
@@ -49,17 +50,48 @@
         android:ems="10"
         android:hint="UNM Email Address"
         android:inputType="textEmailAddress"
+        android:minHeight="48dp"
         android:textColorHint="@color/white" />
 
     <Button
         android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextClass"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/Cherry"
+        android:minHeight="48dp"
+        android:text="Sign Up" />
+
+    <EditText
+        android:id="@+id/editTextMajor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editTextSignupPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:backgroundTint="@color/Cherry"
-        android:text="Sign Up" />
+        android:ems="10"
+        android:hint="UNM Major"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/editTextClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextMajor"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Class"
+        android:textColorHint="@color/white"/>
 
 
 </RelativeLayout>

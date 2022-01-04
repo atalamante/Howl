@@ -1,18 +1,34 @@
 package com.example.howl;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.ImageDecoder;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.parse.ParseException;
+import com.parse.ParseFile;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
+
+import java.io.IOException;
+import java.io.File;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -21,6 +37,8 @@ public class SignupActivity extends AppCompatActivity {
     private EditText editTextEmail;
     private EditText editTextSignUpPassword;
     private Button btnSignUp;
+    private EditText editTextMajor;
+    private EditText editTextClass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +48,9 @@ public class SignupActivity extends AppCompatActivity {
         editTextName = findViewById(R.id.editTextName);
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextSignUpPassword = findViewById(R.id.editTextSignupPassword);
+        editTextMajor = findViewById(R.id.editTextMajor);
         btnSignUp = findViewById(R.id.btnSignUp);
+        editTextClass = findViewById(R.id.editTextClass);
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,12 +65,18 @@ public class SignupActivity extends AppCompatActivity {
                 String password = editTextSignUpPassword.getText().toString();
                 String name = editTextName.getText().toString();
                 String email = editTextEmail.getText().toString();
-                signUpUser(username,password, name, email);
+                String year = editTextClass.getText().toString();
+                String major = editTextMajor.getText().toString();
+                signUpUser(username,password, name, email,year, major);
             }
         });
+
+
+
+
     }
 
-    private void signUpUser(String username, String password, String name, String email) {
+    private void signUpUser(String username, String password, String name, String email, String year, String major) {
         Log.i(TAG, "Attempting to sign up user " + username + " , " + name);
         ParseUser user = new ParseUser();
         user.setUsername(username);
@@ -58,6 +84,8 @@ public class SignupActivity extends AppCompatActivity {
         user.setEmail(email);
         user.put("name", name);
         user.put("email", email);
+        user.put("class", year);
+        user.put("major", major);
         user.signUpInBackground(new SignUpCallback() {
             @Override
             public void done(ParseException e) {

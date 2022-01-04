@@ -3,13 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/HowlAppContest/app/src/main/res/drawable/bottom_navigation_selector.xml" value="0.1735" />
         <entry key="..\:/HowlAppContest/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/HowlAppContest/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/HowlAppContest/app/src/main/res/layout/activity_signup.xml" value="0.36666666666666664" />
+        <entry key="..\:/HowlAppContest/app/src/main/res/layout/activity_signup.xml" value="0.33" />
         <entry key="..\:/HowlAppContest/app/src/main/res/layout/fragment_compose.xml" value="0.33" />
         <entry key="..\:/HowlAppContest/app/src/main/res/layout/fragment_posts.xml" value="0.36666666666666664" />
         <entry key="..\:/HowlAppContest/app/src/main/res/layout/fragment_profile_page.xml" value="0.36666666666666664" />
-        <entry key="..\:/HowlAppContest/app/src/main/res/layout/item_post.xml" value="0.36666666666666664" />
+        <entry key="..\:/HowlAppContest/app/src/main/res/layout/item_post.xml" value="0.67" />
         <entry key="..\:/HowlAppContest/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.36666666666666664" />
         <entry key="..\:/HowlAppContest/app/src/main/res/menu/signout_menu.xml" value="0.2712962962962963" />
       </map>

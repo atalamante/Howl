@@ -13,13 +13,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="0dp"
         android:layout_toEndOf="@+id/ivProfilePicture"
         android:padding="0dp"
         android:text="Aaron Talamante"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="20sp" />
 
     <TextView
@@ -27,12 +27,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="9dp"
         android:layout_marginBottom="10dp"
         android:layout_toEndOf="@+id/tvName"
         android:text="atalamante"
-        android:textColor="#FFFFFF" />
+        android:textColor="#000000" />
 
     <ImageView
         android:id="@+id/ivProfilePicture"
@@ -52,12 +52,41 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvName"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="12dp"
         android:layout_marginBottom="10dp"
         android:layout_toEndOf="@+id/ivProfilePicture"
         android:text="Merry Christmas! Go Lobos!!"
         android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/tvMajor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvName"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_toEndOf="@+id/ivProfilePicture"
+        android:text="Computer Science"
+        android:textColor="#BA0C2F"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvMajor"
+        android:layout_alignBottom="@+id/tvMajor"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="-1dp"
+        android:layout_toEndOf="@+id/tvMajor"
+        android:text="Junior"
+        android:textColor="#007A86"
+        android:textSize="12sp" />
 
 </RelativeLayout>
