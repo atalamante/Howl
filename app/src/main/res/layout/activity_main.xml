@@ -20,6 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:menu="@menu/menu_bottom_navigation"
-        app:itemIconTint="@drawable/bottom_navigation_selector"/>
+        app:itemIconTint="@drawable/bottom_navigation_selector"
+        app:itemTextColor="@drawable/bottom_navigation_selector"
+        app:layout_behavior= "com.google.android.material.behavior.HideBottomViewOnScrollBehavior" />
 
 </RelativeLayout>

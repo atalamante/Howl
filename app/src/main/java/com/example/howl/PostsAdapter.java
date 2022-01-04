@@ -82,4 +82,9 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             tvClass.setText(post.getUser().get("class").toString());
         }
     }
+    public void clear() {
+        posts.clear();
+        notifyDataSetChanged();
+    }
+
 }

@@ -31,8 +31,11 @@ import java.util.List;
 public class ProfilePageFragment extends PostsFragment{
 
     private static final String TAG = "ProfilePageFragment";
+    private TextView textViewName;
     private TextView textViewUsername;
     private Button btnLogout;
+    private TextView textViewMajor;
+    private TextView textViewClass;
 
     public ProfilePageFragment() {
         // Required empty public constructor
@@ -78,17 +81,12 @@ public class ProfilePageFragment extends PostsFragment{
         super.onViewCreated(view, savedInstanceState);
         textViewUsername = view.findViewById(R.id.textViewUsername);
         textViewUsername.setText(ParseUser.getCurrentUser().getUsername().toString());
-//        btnLogout = view.findViewById(R.id.btnLogout);
-//        btnLogout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                ParseUser.logOut();
-//                ParseUser currentUser = ParseUser.getCurrentUser();
-//                Intent intent = new Intent(getContext(), LoginActivity.class);
-//                startActivity(intent);
-//                getActivity().finish();
-//            }
-//        });
+        textViewName = view.findViewById(R.id.textViewName);
+        textViewName.setText(ParseUser.getCurrentUser().get("name").toString().toUpperCase());
+        textViewMajor = view.findViewById(R.id.textViewMajor);
+        textViewMajor.setText(ParseUser.getCurrentUser().get("major").toString());
+        textViewClass = view.findViewById(R.id.textViewClass);
+        textViewClass.setText(ParseUser.getCurrentUser().get("class").toString());
     }
 
     protected void queryPosts() {
