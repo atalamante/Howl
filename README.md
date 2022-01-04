@@ -27,7 +27,14 @@ Email: ptalamante@unm.edu
 ## Parse
 Parse is the backend for Howl. Parse holds all the information on the users and the posts. The website for Parse is: https://www.back4app.com/
 
-Here is the data stored by Parse for Howl. There are two files: Users and Posts. The files are in JSON format. 
+Here is the data stored by Parse for Howl. 
+
+### Users 
+[Users.zip](https://github.com/atalamante/Howl/files/7805794/Users.zip)
+
+
+### Posts
+[Posts.zip](https://github.com/atalamante/Howl/files/7805796/Posts.zip)
 
 ## Test Accounts
 For testing, we will list some accounts that can be used. 
