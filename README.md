@@ -11,6 +11,16 @@ The Home page of Howl is the feed where all the posts are shown. A post will con
 
 The profile page shows the current user’s name, username, major, and year along with all their posts. At the top right of the page on the bar in red that says “Howl”, there is a menu icon that will show “Sign Out” when pressed. This is the way the user will be able to sign out of their account if they ever need to. This will take them back to the login/sign up screen.
 
+## Video Walkthrough
+https://youtu.be/v9peTI9Yrus
+
+## Screenshots
+![Login](https://user-images.githubusercontent.com/76193359/148019959-903d5da0-d992-4829-93b9-06839a5c2197.jpg)
+![Signup](https://user-images.githubusercontent.com/76193359/148019964-655a6548-4a68-4e2e-b65f-904b26401adb.jpg)
+![Home](https://user-images.githubusercontent.com/76193359/148019793-0d24ef3e-e9f1-4263-acc8-c51f51af72a0.jpg)
+![Compose](https://user-images.githubusercontent.com/76193359/148019801-9f15a7a0-4493-4eae-bccb-79f6c632d220.jpg)
+![Profile](https://user-images.githubusercontent.com/76193359/148019803-9de9451e-dc6e-4ac3-a643-e008baa49d00.jpg)
+
 ## Team Members
 Aaron Talamante is a Junior at UNM majoring in Computer Science. Aaron was the main programmer of the app along with contributions to brainstorming, design, and editing of the app.
 Email: atalamante625@gmail.com  
